@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Verify Branch') {
             steps {
-                echo "$GIT_BRANCH"
+                //echo "env.BRANCH_NAME"
+                // This step should not normally be used in your script. Consult the inline help for details.
+                envVarsForTool()
             }
         }
     }
